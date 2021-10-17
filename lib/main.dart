@@ -1,4 +1,4 @@
-import 'package:definitely_not_twitter/SplashScreen.dart';
+import 'package:definitely_not_twitter/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Login(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
