@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:definitely_not_twitter/DashBoard.dart';
+import 'package:definitely_not_twitter/login.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         const Duration(seconds: 10),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const DashBoard())));
+            MaterialPageRoute(builder: (context) => const Login())));
   }
 
   @override
