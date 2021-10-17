@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 class DashBoard extends StatelessWidget {
   const DashBoard({Key? key}) : super(key: key);
 
@@ -24,7 +23,6 @@ class DashBoard extends StatelessWidget {
             ),
           ),
         ),
-
       ),
     );
   }
