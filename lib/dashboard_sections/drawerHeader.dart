@@ -1,8 +1,9 @@
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/src/widgets/icon.dart';
 
 class DashDrawerHeader extends StatelessWidget {
-  final String image;
+  final Icon image;
   final String name;
   final String account;
   final int following;
@@ -22,7 +23,7 @@ class DashDrawerHeader extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(200)),
-            child: Image.network(image, width: 60),
+            child: image,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 12.0),
@@ -51,18 +52,28 @@ class DashDrawerHeader extends StatelessWidget {
                 Text(following.toString(),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                      fontSize: 18,
                       color: Palette.olive,)),
-                Text(" Following"),
+                Text(" Following", 
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: Palette.gray,
+                    )),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: Text(followers.toString(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: 18,
                         color:  Palette.olive,)),
                 ),
-                Text(" Followers"),
+                Text(" Followers",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: Palette.gray,
+                    )),
               ],
             )
           ),

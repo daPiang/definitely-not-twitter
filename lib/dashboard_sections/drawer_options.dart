@@ -13,15 +13,15 @@ class DrawerOptions extends StatelessWidget {
     return Row(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(8.0),
           child: icon,
         ),
         Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(8.0),
           child: Text(label, style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Palette.gray,
-            fontSize: 20,
+            fontSize: 18,
           )),
         ),
 
