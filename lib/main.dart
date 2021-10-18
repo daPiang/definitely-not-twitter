@@ -1,3 +1,4 @@
+import 'package:definitely_not_twitter/DashBoard.dart';
 import 'package:definitely_not_twitter/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const SplashScreen(),
+      home: const DashBoard(),
       debugShowCheckedModeBanner: false,
     );
   }
