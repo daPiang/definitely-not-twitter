@@ -6,12 +6,16 @@ class DrawerOptions extends StatelessWidget {
   final Icon icon;
   final String label;
 
-  const DrawerOptions({Key? key, required this.icon, required this.label}) : super(key: key);
+  const DrawerOptions({Key? key, required this.icon , required this.label}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: icon,
+        ),
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: Text(label, style: TextStyle(
