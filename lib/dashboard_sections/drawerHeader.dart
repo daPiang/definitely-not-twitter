@@ -25,7 +25,7 @@ class DashDrawerHeader extends StatelessWidget {
             child: Image.network(image, width: 60),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 8.0),
+            padding: const EdgeInsets.only(top: 12.0),
             child: Text(name, 
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -51,6 +51,7 @@ class DashDrawerHeader extends StatelessWidget {
                 Text(following.toString(),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      fontSize: 16,
                       color: Palette.olive,)),
                 Text(" Following"),
                 Padding(
@@ -58,6 +59,7 @@ class DashDrawerHeader extends StatelessWidget {
                   child: Text(followers.toString(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontSize: 16,
                         color:  Palette.olive,)),
                 ),
                 Text(" Followers"),
