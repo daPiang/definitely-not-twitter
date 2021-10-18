@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
   void _authLogin() {
     if (_userCont.text == 'admin' && _passCont.text == 'admin') {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const DashBoard()));
+          context, MaterialPageRoute(builder: (context) => const Compose()));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(loginSnack);
     }
