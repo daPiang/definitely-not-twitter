@@ -7,7 +7,6 @@ import 'package:flutter/src/material/icons.dart';
 import 'package:flutter/src/widgets/icon.dart';
 
 class ProfileDrawer extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return Drawer(
