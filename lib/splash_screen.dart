@@ -15,9 +15,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(seconds: 10),
-        () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const Login())));
+        const Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => const Login())));
   }
 
   @override
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-            color: Color(0xFFEFEBE9),
+          color: Color(0xFFEFEBE9),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

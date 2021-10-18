@@ -1,3 +1,4 @@
+import 'package:definitely_not_twitter/dashboard_sections/profiledrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -11,19 +12,42 @@ class DashBoard extends StatelessWidget {
         brightness: Brightness.light,
         backgroundColor: Colors.white,
         elevation: 2,
-        title: const Text("Twitter"),
-        leading: Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(200)),
+        title: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Image.asset(
-              'assets/images/icon.png',
-              width: 18,
-              height: 18,
+              'assets/images/Birdie.png',
+              width: 50,
+              height: 50,
             ),
           ),
         ),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return GestureDetector(
+              onTap: () => Scaffold.of(context).openDrawer(),
+              child: Padding(
+                padding: const EdgeInsets.all(1.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(200)),
+                  child: Image.asset(
+                    'assets/images/icon.png',
+                    width: 50,
+                    height: 50,
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Icon(Icons.auto_awesome_sharp),
+          ),
+        ],
       ),
+      drawer: ProfileDrawer(),
     );
   }
 }
