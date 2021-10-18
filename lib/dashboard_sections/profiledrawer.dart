@@ -3,6 +3,8 @@ import 'package:definitely_not_twitter/dashboard_sections/drawer_options.dart';
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/src/material/icons.dart';
+import 'package:flutter/src/widgets/icon.dart';
 
 class ProfileDrawer extends StatelessWidget {
   
@@ -21,13 +23,28 @@ class ProfileDrawer extends StatelessWidget {
             Divider(),
             DrawerOptions(icon: Icon(Icons.account_circle,
                           color: Palette.olive,
-                          size: 24), 
+                          size: 40), 
                           label: "  Profile"),
-            DrawerOptions(icon: Icon(Icons.article), label: "  Lists"),
-            DrawerOptions(icon: Icon(Icons.article), label: "  Topics"),
-            DrawerOptions(icon: Icon(Icons.article), label: "  Bookmarks"),
-            DrawerOptions(icon: Icon(Icons.article), label: "  Moments"),
-            DrawerOptions(icon: Icon(Icons.article), label: "  Monetization"),
+            DrawerOptions(icon: Icon(Icons.article,
+                          color: Palette.olive,
+                          size: 40),
+                          label: "  Lists"),
+            DrawerOptions(icon: Icon(Icons.flutter_dash_rounded,
+                          color: Palette.olive,
+                          size: 40), 
+                          label: "  Topics"),
+            DrawerOptions(icon: Icon(Icons.bookmark_outlined,
+                          color: Palette.olive,
+                          size: 40,), 
+                          label: "  Bookmarks"),
+            DrawerOptions(icon: Icon(Icons.flash_on_rounded,
+                          color: Palette.olive,
+                          size: 40,), 
+                          label: "  Moments"),
+            DrawerOptions(icon: Icon(Icons.equalizer_rounded,
+                          color: Palette.olive,
+                          size: 40,), 
+                          label: "  Monetization"),
             Divider(),
           ]
         )

@@ -1,8 +1,9 @@
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/src/widgets/icon.dart';
 
 class DrawerOptions extends StatelessWidget {
-  final dynamic icon;
+  final Icon icon;
   final String label;
 
   const DrawerOptions({Key? key, required this.icon, required this.label}) : super(key: key);

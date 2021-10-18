@@ -1,6 +1,9 @@
 import 'package:definitely_not_twitter/dashboard_sections/profiledrawer.dart';
+import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter/src/material/icons.dart';
+import 'package:flutter/src/widgets/icon.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -43,7 +46,10 @@ class DashBoard extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(12.0),
-            child: Icon(Icons.auto_awesome_sharp),
+            child: Icon(Icons.auto_awesome_sharp,
+            color: Palette.olive,
+            size: 30.0,
+            ),
           ),
         ],
       ),
