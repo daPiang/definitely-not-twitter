@@ -1,4 +1,4 @@
-import 'package:definitely_not_twitter/DashBoard.dart';
+import 'package:definitely_not_twitter/dashboard.dart';
 import 'package:definitely_not_twitter/compose_daldal.dart';
 import 'package:flutter/material.dart';
 
