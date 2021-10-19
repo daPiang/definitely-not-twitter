@@ -1,4 +1,4 @@
-import 'package:definitely_not_twitter/dashboard_sections/home.dart';
+import 'package:definitely_not_twitter/dashboard_sections/homev2.dart';
 import 'package:definitely_not_twitter/dashboard_sections/messages.dart';
 import 'package:definitely_not_twitter/dashboard_sections/notifications.dart';
 import 'package:definitely_not_twitter/dashboard_sections/profiledrawer.dart';
@@ -35,8 +35,8 @@ class _DashBoardState extends State<DashBoard> {
             padding: const EdgeInsets.all(8.0),
             child: Image.asset(
               'assets/images/Birdie.png',
-              width: 50,
-              height: 50,
+              width: 40,
+              height: 40,
             ),
           ),
         ),
@@ -50,7 +50,7 @@ class _DashBoardState extends State<DashBoard> {
                   borderRadius: BorderRadius.all(Radius.circular(200)),
                   child: Icon(Icons.account_circle_rounded,
                     color:Palette.blueccent,
-                    size: 50.0,
+                    size: 40.0,
                   ),
                 ),
               ),
@@ -70,7 +70,7 @@ class _DashBoardState extends State<DashBoard> {
       drawer: ProfileDrawer(),
       body: Container(
         child: [
-          Home(),
+          Homev2(),
           Search(),
           Notifications(),
           Messages(),
