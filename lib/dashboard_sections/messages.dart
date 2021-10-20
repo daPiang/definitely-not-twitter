@@ -1,4 +1,4 @@
-import 'package:definitely_not_twitter/dashboard_sections/messages_data.dart';
+import 'package:definitely_not_twitter/screen_data/messages_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -14,6 +14,7 @@ class _MessagesState extends State<Messages> {
     int length = messageData.length;
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView.separated(
             separatorBuilder: (context, index) {

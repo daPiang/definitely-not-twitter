@@ -1,3 +1,5 @@
+import 'package:definitely_not_twitter/DashBoard.dart';
+import 'package:definitely_not_twitter/screen_data/dashboard_data.dart';
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +15,9 @@ class _ComposeState extends State<Compose> {
   final _daldalCont = TextEditingController();
   bool _canDaldal = false;
 
+  final daldalSnack =
+      const SnackBar(content: Text('Daldal posted successfully'));
+
   @override
   void dispose() {
     _daldalCont.dispose();
@@ -27,6 +32,18 @@ class _ComposeState extends State<Compose> {
         _canDaldal = false;
       }
     });
+  }
+
+  void daldal() {
+    DASHBOARD_DATA.add([
+      'Admin',
+      'OfficialAdmin',
+      _daldalCont.text,
+      'https://lh3.googleusercontent.com/a-/AOh14GhAxW-c9GZGY4rr3s7no-lL69hJFmWf_NmH3hAA=s96-c-rg-br100'
+    ]);
+    ScaffoldMessenger.of(context).showSnackBar(daldalSnack);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const DashBoard()));
   }
 
   @override
@@ -61,7 +78,11 @@ class _ComposeState extends State<Compose> {
                         color: Colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),
-                    onPressed: _canDaldal ? () {} : null,
+                    onPressed: _canDaldal
+                        ? () {
+                            daldal();
+                          }
+                        : null,
                     child: const Text('Daldal'),
                   ),
                 ],
