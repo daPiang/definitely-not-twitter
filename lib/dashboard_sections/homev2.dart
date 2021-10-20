@@ -11,6 +11,7 @@ class _HomeState extends State<Homev2> {
   @override
   Widget build(BuildContext context) {
     List<dynamic> daldata = DASHBOARD_DATA;
+    int length  = daldata.length;
 
     return MaterialApp(
       home: Scaffold(
@@ -19,9 +20,9 @@ class _HomeState extends State<Homev2> {
       itemCount: daldata.length,
       itemBuilder: (context, index) {
         return ListTile(
-          contentPadding: EdgeInsets.only(left:20, top: 15),
-          leading: CircleAvatar(backgroundImage: NetworkImage(daldata[index][3])),
-          title: Text(daldata[index][0] + " @" + daldata[index][1]),
+          contentPadding: EdgeInsets.only(left:20, top: 15,),
+          leading: CircleAvatar(backgroundImage: NetworkImage(daldata[length - 1 - index][3])),
+          title: Text(daldata[length - 1 - index][0] + " @" + daldata[length - 1 - index][1]),
           subtitle: Flexible(
             child: Column( 
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,7 +30,7 @@ class _HomeState extends State<Homev2> {
               children: [
                 Padding(
                   padding:  EdgeInsets.only(bottom: 15),
-                  child: Text(daldata[index][2], textAlign: TextAlign.left,),
+                  child: Text(daldata[length - 1 - index][2], textAlign: TextAlign.left,),
                 ),
                 Row(
                   children: [
