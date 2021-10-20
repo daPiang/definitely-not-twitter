@@ -35,7 +35,7 @@ class _ComposeState extends State<Compose> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -43,29 +43,31 @@ class _ComposeState extends State<Compose> {
               child: Row(
                 children: [
                   IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.arrow_back_ios_new_rounded)),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(Icons.arrow_back_ios_new_rounded)),
                   Expanded(
                       child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                   )),
                   RawMaterialButton(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
                     elevation: 0,
                     fillColor: _canDaldal ? Palette.blueccent : Palette.gray,
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),
                     onPressed: _canDaldal ? () {} : null,
-                    child: Text('Daldal'),
+                    child: const Text('Daldal'),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Stack(
@@ -76,7 +78,7 @@ class _ComposeState extends State<Compose> {
                         width: 50, height: 50),
                   ),
                   Container(
-                    padding: EdgeInsets.only(left: 55),
+                    padding: const EdgeInsets.only(left: 55),
                     child: Expanded(
                       child: TextField(
                         onChanged: (text) {
@@ -86,8 +88,9 @@ class _ComposeState extends State<Compose> {
                         keyboardType: TextInputType.multiline,
                         maxLines: null,
                         maxLength: 280,
-                        style: TextStyle(color: Palette.olive, fontSize: 20),
-                        decoration: InputDecoration(
+                        style:
+                            const TextStyle(color: Palette.olive, fontSize: 20),
+                        decoration: const InputDecoration(
                             hintText: 'What\'s the tea?',
                             hintStyle: TextStyle(color: Palette.gray),
                             border: InputBorder.none),

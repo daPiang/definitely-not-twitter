@@ -1,4 +1,4 @@
-List DASHBOARD_DATA=[
+List DASHBOARD_DATA = [
   [
     "Cianggciang",
     "cianggciang",

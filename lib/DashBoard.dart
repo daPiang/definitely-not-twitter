@@ -1,14 +1,16 @@
-import 'package:definitely_not_twitter/dashboard_sections/homev2.dart';
+// ignore_for_file: file_names
+
+import 'package:definitely_not_twitter/dashboard_sections/home.dart';
 import 'package:definitely_not_twitter/dashboard_sections/messages.dart';
 import 'package:definitely_not_twitter/dashboard_sections/notifications.dart';
 import 'package:definitely_not_twitter/dashboard_sections/profile_drawer.dart';
 import 'package:definitely_not_twitter/dashboard_sections/search.dart';
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/src/material/icons.dart';
 import 'package:flutter/src/widgets/icon.dart';
-
 import 'dashboard_sections/profile_drawer.dart';
 
 class DashBoard extends StatefulWidget {
@@ -31,7 +33,7 @@ class _DashBoardState extends State<DashBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.light,
+        //systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: Colors.white,
         elevation: 2,
         title: Center(
@@ -48,12 +50,13 @@ class _DashBoardState extends State<DashBoard> {
           builder: (BuildContext context) {
             return GestureDetector(
               onTap: () => Scaffold.of(context).openDrawer(),
-              child: Padding(
-                padding: const EdgeInsets.all(1.0),
+              child: const Padding(
+                padding: EdgeInsets.all(1.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(200)),
-                  child: Icon(Icons.account_circle_rounded,
-                    color:Palette.blueccent,
+                  child: Icon(
+                    Icons.account_circle_rounded,
+                    color: Palette.blueccent,
                     size: 40.0,
                   ),
                 ),
@@ -61,7 +64,7 @@ class _DashBoardState extends State<DashBoard> {
             );
           },
         ),
-        actions: [
+        actions: const [
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Icon(
@@ -72,10 +75,10 @@ class _DashBoardState extends State<DashBoard> {
           ),
         ],
       ),
-      drawer: ProfileDrawer(),
+      drawer: const ProfileDrawer(),
       body: Container(
         child: [
-          Homev2(),
+          const Home(),
           Search(),
           Notifications(),
           Messages(),

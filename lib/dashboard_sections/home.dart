@@ -1,7 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:definitely_not_twitter/dashboard_sections/dashboard_data.dart';
+
+import '../compose_daldal.dart';
 
 class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   _HomeState createState() => _HomeState();
 }
@@ -9,38 +14,71 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8.0),
-      children: <Widget>[
-        ListTile(
-          title: Text("Cianggciangg"),
-          subtitle: Text("wanna play codm right now.."),
-          leading: CircleAvatar(backgroundImage: NetworkImage("https://lh3.googleusercontent.com/a-/AOh14GhAxW-c9GZGY4rr3s7no-lL69hJFmWf_NmH3hAA=s96-c-rg-br100")),
-          trailing: Icon(Icons.favorite,
-                          color: Colors.red[300]),
-        ),
-        ListTile(
-          title: Text("AngelaDee"),
-          subtitle: Text("K kapoy na sige acads AAAaaAA"),
-          leading: CircleAvatar(backgroundImage: NetworkImage("https://lh3.googleusercontent.com/a/AATXAJx3y9lxVMGWSmoPANdT0aFjVGxrH0dTVGRZ8hmr=s96-c-br100-rg-mo")),
-          trailing: Icon(Icons.favorite,
-                          color: Colors.red[300]),
-        ),
-        ListTile(
-          title: Text("NatersNut"),
-          subtitle: Text("I think i'm gonna fail this course."),
-          leading: CircleAvatar(backgroundImage: NetworkImage("https://lh3.googleusercontent.com/a-/AOh14GhAxW-c9GZGY4rr3s7no-lL69hJFmWf_NmH3hAA=s96-c-rg-br100")),
-          trailing: Icon(Icons.favorite,
-                          color: Colors.red[300]),
-        ),
-        ListTile(
-          title: Text("dazaiSan"),
-          subtitle: Text("Shinde Kudasai"),
-          leading: CircleAvatar(backgroundImage: NetworkImage("https://lh3.googleusercontent.com/a/AATXAJwKGGwx2HpCr-uKODwCQ7wfDHVhyTVKVy1p_r7j=s288-p-rw-no-mo")),
-          trailing: Icon(Icons.favorite,
-                          color: Colors.red[300]),
-        ),
-      ],
-    );
+    List<dynamic> daldata = DASHBOARD_DATA;
+    int length = daldata.length;
+
+    return MaterialApp(
+        home: Scaffold(
+      body: ListView.separated(
+          separatorBuilder: (context, index) {
+            return const Divider();
+          },
+          itemCount: daldata.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              contentPadding: const EdgeInsets.only(
+                left: 20,
+                top: 15,
+              ),
+              leading: CircleAvatar(
+                  backgroundImage:
+                      NetworkImage(daldata[length - 1 - index][3])),
+              title: Text(daldata[length - 1 - index][0] +
+                  " @" +
+                  daldata[length - 1 - index][1]),
+              subtitle: Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 15),
+                      child: Text(
+                        daldata[length - 1 - index][2],
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Icon(Icons.reply, size: 20, color: Colors.grey[600]),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 5, right: 80),
+                          child: Text('15', style: TextStyle(fontSize: 12)),
+                        ),
+                        Icon(Icons.favorite, size: 18, color: Colors.grey[600]),
+                        const Padding(
+                            padding: EdgeInsets.only(left: 5, right: 80),
+                            child: Text('15', style: TextStyle(fontSize: 12))),
+                        Icon(Icons.share, size: 18, color: Colors.grey[600]),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 5),
+                          child: Text('15', style: TextStyle(fontSize: 12)),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              isThreeLine: true,
+            );
+          }),
+      floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Compose()));
+          },
+          backgroundColor: const Color(0xFF528296)),
+    ));
   }
-}
+} // 
