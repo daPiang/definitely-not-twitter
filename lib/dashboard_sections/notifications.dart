@@ -41,51 +41,49 @@ class _NotificationsState extends State<Notifications> {
                   ],
                 ),
               ),
-              subtitle: Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 15),
-                          child: Text(
-                            "@" + notifData[length - 1 - index][4] + " ",
-                            textAlign: TextAlign.left,
-                            style: const TextStyle(
-                                color: Color(0xFF528296), fontSize: 16),
-                          ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 15),
+                        child: Text(
+                          "@" + notifData[length - 1 - index][4] + " ",
+                          textAlign: TextAlign.left,
+                          style: const TextStyle(
+                              color: Color(0xFF528296), fontSize: 16),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 15),
-                          child: Text(
-                            notifData[length - 1 - index][2],
-                            textAlign: TextAlign.left,
-                          ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 15),
+                        child: Text(
+                          notifData[length - 1 - index][2],
+                          textAlign: TextAlign.left,
                         ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.reply, size: 20, color: Colors.grey[600]),
-                        const Padding(
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.reply, size: 20, color: Colors.grey[600]),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 5, right: 80),
+                        child: Text('15', style: TextStyle(fontSize: 12)),
+                      ),
+                      Icon(Icons.favorite, size: 18, color: Colors.grey[600]),
+                      const Padding(
                           padding: EdgeInsets.only(left: 5, right: 80),
-                          child: Text('15', style: TextStyle(fontSize: 12)),
-                        ),
-                        Icon(Icons.favorite, size: 18, color: Colors.grey[600]),
-                        const Padding(
-                            padding: EdgeInsets.only(left: 5, right: 80),
-                            child: Text('15', style: TextStyle(fontSize: 12))),
-                        Icon(Icons.share, size: 18, color: Colors.grey[600]),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 5),
-                          child: Text('15', style: TextStyle(fontSize: 12)),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                          child: Text('15', style: TextStyle(fontSize: 12))),
+                      Icon(Icons.share, size: 18, color: Colors.grey[600]),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text('15', style: TextStyle(fontSize: 12)),
+                      ),
+                    ],
+                  ),
+                ],
               ),
               isThreeLine: true,
             );

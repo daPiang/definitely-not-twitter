@@ -36,20 +36,18 @@ class _MessagesState extends State<Messages> {
                   ),
                 ],
               ),
-              subtitle: Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3),
-                      child: Text(
-                        messageData[length - 1 - index][2],
-                        textAlign: TextAlign.left,
-                      ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: Text(
+                      messageData[length - 1 - index][2],
+                      textAlign: TextAlign.left,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               trailing: Padding(
                 padding: const EdgeInsets.only(bottom: 16, right: 18),

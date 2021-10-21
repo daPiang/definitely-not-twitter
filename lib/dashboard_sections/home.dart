@@ -43,39 +43,37 @@ class _HomeState extends State<Home> {
                   style: const TextStyle(color: Palette.gray),
                 )
               ]),
-              subtitle: Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 15),
-                      child: Text(
-                        daldata[length - 1 - index][2],
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(color: Palette.olive),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 15),
+                    child: Text(
+                      daldata[length - 1 - index][2],
+                      textAlign: TextAlign.left,
+                      style: const TextStyle(color: Palette.olive),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.reply, size: 20, color: Colors.grey[600]),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 5, right: 80),
+                        child: Text('15', style: TextStyle(fontSize: 12)),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.reply, size: 20, color: Colors.grey[600]),
-                        const Padding(
+                      Icon(Icons.favorite, size: 18, color: Colors.grey[600]),
+                      const Padding(
                           padding: EdgeInsets.only(left: 5, right: 80),
-                          child: Text('15', style: TextStyle(fontSize: 12)),
-                        ),
-                        Icon(Icons.favorite, size: 18, color: Colors.grey[600]),
-                        const Padding(
-                            padding: EdgeInsets.only(left: 5, right: 80),
-                            child: Text('15', style: TextStyle(fontSize: 12))),
-                        Icon(Icons.share, size: 18, color: Colors.grey[600]),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 5),
-                          child: Text('15', style: TextStyle(fontSize: 12)),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                          child: Text('15', style: TextStyle(fontSize: 12))),
+                      Icon(Icons.share, size: 18, color: Colors.grey[600]),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: Text('15', style: TextStyle(fontSize: 12)),
+                      ),
+                    ],
+                  ),
+                ],
               ),
               isThreeLine: true,
             );

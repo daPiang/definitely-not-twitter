@@ -103,22 +103,20 @@ class _ComposeState extends State<Compose> {
                   ),
                   Container(
                     padding: const EdgeInsets.only(left: 55),
-                    child: Expanded(
-                      child: TextField(
-                        onChanged: (text) {
-                          _daldalState();
-                        },
-                        controller: _daldalCont,
-                        keyboardType: TextInputType.multiline,
-                        maxLines: null,
-                        maxLength: 280,
-                        style:
-                            const TextStyle(color: Palette.olive, fontSize: 20),
-                        decoration: const InputDecoration(
-                            hintText: 'What\'s the tea?',
-                            hintStyle: TextStyle(color: Palette.gray),
-                            border: InputBorder.none),
-                      ),
+                    child: TextField(
+                      onChanged: (text) {
+                        _daldalState();
+                      },
+                      controller: _daldalCont,
+                      keyboardType: TextInputType.multiline,
+                      maxLines: null,
+                      maxLength: 280,
+                      style:
+                          const TextStyle(color: Palette.olive, fontSize: 20),
+                      decoration: const InputDecoration(
+                          hintText: 'What\'s the tea?',
+                          hintStyle: TextStyle(color: Palette.gray),
+                          border: InputBorder.none),
                     ),
                   )
                 ],
