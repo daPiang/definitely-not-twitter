@@ -35,12 +35,7 @@ class _ComposeState extends State<Compose> {
   }
 
   void daldal() {
-    dashData.add([
-      'Admin',
-      'OfficialAdmin',
-      _daldalCont.text,
-      'https://i.imgur.com/Byobb4e.jpg'
-    ]);
+    dashData.add(['Admin', 'OfficialAdmin', _daldalCont.text, 'A']);
     ScaffoldMessenger.of(context).showSnackBar(daldalSnack);
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => const DashBoard()));
@@ -67,10 +62,9 @@ class _ComposeState extends State<Compose> {
                                 builder: (context) => const DashBoard()));
                       },
                       icon: const Icon(Icons.arrow_back_ios_new_rounded)),
-                  Expanded(
-                      child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                  )),
+                  const SizedBox(
+                    width: 235,
+                  ),
                   RawMaterialButton(
                     padding: const EdgeInsets.symmetric(horizontal: 25),
                     shape: RoundedRectangleBorder(
@@ -110,7 +104,7 @@ class _ComposeState extends State<Compose> {
                       controller: _daldalCont,
                       keyboardType: TextInputType.multiline,
                       maxLines: null,
-                      maxLength: 280,
+                      maxLength: 240,
                       style:
                           const TextStyle(color: Palette.olive, fontSize: 20),
                       decoration: const InputDecoration(

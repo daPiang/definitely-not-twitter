@@ -31,8 +31,8 @@ class _HomeState extends State<Home> {
                 top: 15,
               ),
               leading: CircleAvatar(
-                  backgroundImage:
-                      NetworkImage(daldata[length - 1 - index][3])),
+                child: Text(daldata[length - 1 - index][3]),
+              ),
               title: Row(children: [
                 Text(
                   daldata[length - 1 - index][0],
