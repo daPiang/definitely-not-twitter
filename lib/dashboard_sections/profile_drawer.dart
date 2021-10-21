@@ -3,8 +3,6 @@ import 'package:definitely_not_twitter/dashboard_sections/drawer_options.dart';
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/src/material/icons.dart';
-import 'package:flutter/src/widgets/icon.dart';
 
 class ProfileDrawer extends StatelessWidget {
   const ProfileDrawer({Key? key}) : super(key: key);
@@ -13,7 +11,7 @@ class ProfileDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
         child: SafeArea(
-      child: Column(children: [
+      child: Column(children: const [
         DashDrawerHeader(
           image: Icon(Icons.account_circle_rounded,
               color: Palette.blueccent, size: 100),

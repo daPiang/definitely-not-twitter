@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:definitely_not_twitter/dashboard.dart';
 import 'package:definitely_not_twitter/login.dart';
 import 'package:flutter/material.dart';
 

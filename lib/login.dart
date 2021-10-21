@@ -1,5 +1,4 @@
 import 'package:definitely_not_twitter/dashboard.dart';
-import 'package:definitely_not_twitter/compose_daldal.dart';
 import 'package:flutter/material.dart';
 
 import 'palette.dart';
@@ -28,7 +27,7 @@ class _LoginState extends State<Login> {
   void _authLogin() {
     if (_userCont.text == 'admin' && _passCont.text == 'admin') {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Compose()));
+          context, MaterialPageRoute(builder: (context) => const DashBoard()));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(loginSnack);
     }

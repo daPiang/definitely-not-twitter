@@ -7,11 +7,6 @@ import 'package:definitely_not_twitter/dashboard_sections/profile_drawer.dart';
 import 'package:definitely_not_twitter/dashboard_sections/search.dart';
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter/src/material/icons.dart';
-import 'package:flutter/src/widgets/icon.dart';
-import 'dashboard_sections/profile_drawer.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -33,7 +28,6 @@ class _DashBoardState extends State<DashBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //systemOverlayStyle: SystemUiOverlayStyle.light,
         backgroundColor: Colors.white,
         elevation: 2,
         title: Center(
@@ -66,10 +60,10 @@ class _DashBoardState extends State<DashBoard> {
         ),
         actions: const [
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: EdgeInsets.all(12.0),
             child: Icon(
               Icons.auto_awesome_sharp,
-              color: Palette.olive,
+              color: Palette.blueccent,
               size: 30.0,
             ),
           ),
@@ -79,9 +73,9 @@ class _DashBoardState extends State<DashBoard> {
       body: Container(
         child: [
           const Home(),
-          Search(),
-          Notifications(),
-          Messages(),
+          const Search(),
+          const Notifications(),
+          const Messages(),
         ].elementAt(_currentScreen),
       ),
       bottomNavigationBar: BottomNavigationBar(

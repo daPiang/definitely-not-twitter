@@ -35,11 +35,11 @@ class _ComposeState extends State<Compose> {
   }
 
   void daldal() {
-    DASHBOARD_DATA.add([
+    dashData.add([
       'Admin',
       'OfficialAdmin',
       _daldalCont.text,
-      'https://lh3.googleusercontent.com/a-/AOh14GhAxW-c9GZGY4rr3s7no-lL69hJFmWf_NmH3hAA=s96-c-rg-br100'
+      'https://i.imgur.com/Byobb4e.jpg'
     ]);
     ScaffoldMessenger.of(context).showSnackBar(daldalSnack);
     Navigator.push(
@@ -53,7 +53,7 @@ class _ComposeState extends State<Compose> {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Padding(
               padding: const EdgeInsets.only(right: 10.0),
@@ -61,7 +61,10 @@ class _ComposeState extends State<Compose> {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DashBoard()));
                       },
                       icon: const Icon(Icons.arrow_back_ios_new_rounded)),
                   Expanded(
@@ -93,10 +96,10 @@ class _ComposeState extends State<Compose> {
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               child: Stack(
                 children: [
-                  Positioned(
+                  const Positioned(
                     left: 0,
-                    child: Image.asset('assets/images/BIRDIE_PNG.png',
-                        width: 50, height: 50),
+                    child: Icon(Icons.account_circle_rounded,
+                        size: 50, color: Palette.blueccent),
                   ),
                   Container(
                     padding: const EdgeInsets.only(left: 55),

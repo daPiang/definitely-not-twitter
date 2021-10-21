@@ -1,6 +1,5 @@
 import 'package:definitely_not_twitter/palette.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/src/widgets/icon.dart';
 
 class DashDrawerHeader extends StatelessWidget {
   final Icon image;
@@ -28,13 +27,13 @@ class DashDrawerHeader extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(200)),
+            borderRadius: const BorderRadius.all(Radius.circular(200)),
             child: image,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 12.0),
             child: Text(name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                   color: Palette.olive,
@@ -46,7 +45,7 @@ class DashDrawerHeader extends StatelessWidget {
               children: [
                 Expanded(
                     child: Text("@$account",
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Palette.gray,
                         ))),
               ],
@@ -57,12 +56,12 @@ class DashDrawerHeader extends StatelessWidget {
               child: Row(
                 children: [
                   Text(following.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                         color: Palette.olive,
                       )),
-                  Text(" Following",
+                  const Text(" Following",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
@@ -71,13 +70,13 @@ class DashDrawerHeader extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Text(followers.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
                           color: Palette.olive,
                         )),
                   ),
-                  Text(" Followers",
+                  const Text(" Followers",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
